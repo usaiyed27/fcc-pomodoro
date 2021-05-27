@@ -6,12 +6,17 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+    	sessionTime: 25,
+    	breakTime: 5
+    }
   }
   render(){
+  	const {sessionTime, breakTime} = this.state;
   	return (
     <div className="App">
-      <PomodoroSession />
-      <PomodoroBreak />
+      <PomodoroSession  sessionTime = {sessionTime}/>
+      <PomodoroBreak breakTime = {breakTime}/>
     </div>
    );
   }	
